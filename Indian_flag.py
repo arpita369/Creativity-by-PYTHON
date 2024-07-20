@@ -1,0 +1,68 @@
+import turtle
+s= turtle.getscreen()
+s.title("Indian Flag")
+turtle.hideturtle()
+t1= turtle.Turtle()
+#stick
+t1.penup()
+a,b=-155,175
+t1.goto(a,b)
+t1.pendown()
+t1.fillcolor("brown")
+t1.begin_fill()
+t1.goto(a+5,b)
+t1.goto(a+5,-b)
+t1.goto(a,-b)
+t1.goto(a,b)
+t1.end_fill()
+#1st base
+t1.penup()
+t1.goto(a-50,-b)
+t1.fillcolor("gray")
+t1.begin_fill()
+t1.goto(a-50,-b-20)
+t1.goto(a+55,-b-20)
+t1.goto(a+55,-b)
+t1.goto(a-50,-b)
+t1.end_fill()
+#2nd base
+t1.penup()
+t1.goto(a-100,-b-20)
+t1.fillcolor("gray")
+t1.begin_fill()
+t1.goto(a-100,-b-40)
+t1.goto(a+105,-b-40)
+t1.goto(a+105,-b-20)
+t1.goto(a-100,-b-20)
+t1.end_fill()
+#inner boxes
+txy= [(-150,175,"orange"), (-150,125,"white"), (-150,75,"green")]
+for xyc in txy:
+    x,y,c=xyc
+    t1.penup()
+    t1.goto(x,y)
+    t1.pendown()
+    t1.fillcolor(c)
+    t1.begin_fill()
+    t1.goto(x+300,y)
+    t1.goto(x+300,y-50)
+    t1.goto(x,y-50)
+    t1.goto(x,y)
+    t1.end_fill()
+#circle
+t1.pencolor("blue")
+t1.penup()
+t1.goto(0,75)
+t1.pendown()
+t1.circle(25)
+t1.penup()
+t1.goto(0,100)
+t1.pendown()
+#spoke
+for i in range(0,24):
+    t1.left(15)
+    t1.forward(25)
+    t1.goto(0,100)
+    t1.pendown()
+t1.ht()
+input(0)

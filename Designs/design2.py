@@ -1,0 +1,15 @@
+import turtle
+s= turtle.getscreen()
+turtle.ht()
+t1=turtle.Turtle() 
+t1.ht()   
+t1.speed(500)
+turtle.bgcolor("black")
+t1.pencolor("yellow")
+t1.fillcolor("yellow")
+t1.shape("circle")
+for r in range (250):
+    t1.circle(r)
+    t1.lt(30)
+    t1.fd(5)
+input()

@@ -1,0 +1,41 @@
+import turtle
+s= turtle.getscreen()
+turtle.ht()
+t1=turtle.Turtle()
+t2=turtle.Turtle()
+t1.penup()
+t2.penup()
+t2.lt(180)
+t1.goto(-200,0)
+t2.goto(200,0)
+t1.pendown()
+t2.pendown()
+t1.pencolor("blue")
+t2.pencolor("red")
+for r in range (1,11):
+    t1.fd(35)
+    t1.penup()
+    t1.fd(5)
+    t1.pendown()
+for e in range (3):
+    for r in range (1,11):
+        t1.undo()
+        t1.undo()
+        t1.undo()
+        t1.undo()
+        t2.fd(35)
+        t2.penup()
+        t2.fd(5)
+        t2.pendown()
+    for r in range (1,11):
+        t2.undo()
+        t2.undo()
+        t2.undo()
+        t2.undo()
+        t1.fd(35)
+        t1.penup()
+        t1.fd(5)
+        t1.pendown()
+    
+    
+input()
